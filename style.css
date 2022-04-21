@@ -80,23 +80,53 @@ h2.pink {
     padding: 2em 5em 2em 3em;
 }
 
-.email-input {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
+#form {
+    display: flex;
+    flex-direction: row;
     width: 80%;
+    margin: auto;
+    height: 3em;
+    color: var(--soft-red);
 }
 
-#email {
-    border: 0;
-    padding: 1em;
-    width: 75%;
-    margin-left: 9px;
-    height: 10px;
-    font-size: 13px;
+#form input,
+#form button {
+    border-radius: 75%;
+    border: 1px solid grey;
+    padding: 2px;
+}
+
+#form input {
+    border: none;
     flex-grow: 2;
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-left: 2em;
+}
+
+#form button {
+    background-image: linear-gradient(hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    color: var(--desat-red);
+    border-radius: 20px;
+    width: 70px;
+    border: 0;
+}
+
+button img {
+    height: 25px;
+    width: auto;
+    padding-top: .54em;
 }
 
 .attribution {
-    padding-top: 2em;;
+    padding-top: 2em;
+}
+
+@media screen and (min-width: 690px) {
+
+}
+
+@media screen and (min-width: 990px) {
+   
 }
