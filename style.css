@@ -22,6 +22,15 @@ header {
     white-space: pre-line;
 }
 
+form {
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    border: 2px solid hsl(0, 36%, 70%);
+    padding: 2px;
+    height: 40px;
+}
+
 .circle {
     border: 2px solid hsl(0, 36%, 70%);
     width: 14px;
@@ -76,13 +85,18 @@ h2.pink {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    padding-bottom: 4em;
 }
 
 #email {
-    border-radius: 25px;
-    border: 2px solid hsl(0, 36%, 70%);
-    height: 40px;
-    padding-left: 1em;
-    width: 85%;
+    border: 0;
+    padding: 1em;
+    width: 75%;
+    margin-left: 9px;
+    height: 10px;
+    font-size: 13px;
+    flex-grow: 2;
+}
+
+.attribution {
+    padding-top: 2em;;
 }
