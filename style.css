@@ -6,219 +6,151 @@
 
 * {
     font-family: "Josefin Sans", sans-serif;
+}
+
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-
-.container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    height: 100vh;
-}
-
-.hero-container {
-    display: flex;
-}
-
-.hero-desktop {
-    width: 100%;
-    min-width: 600px;
-}
-
-.hero-mobile {
+.desktop-hero {
     display: none;
-    width: 100%;
 }
 
-.container-wrapper {
-    background-image: url("./images/bg-pattern-desktop.svg");
-    background-size: cover;
-    padding: 5em 2em 0 10em;
-}
+.main-div {
+    width: 375px;
+    margin: 0 auto;
 
-.desktop-logo {
-    display: block;
-}
-
-.logo-container {
-    display: none;
 }
 
 .logo {
-    object-fit: contain;
+    padding: 15px 0;
 }
 
-.title {
-    margin: 2.5em 0 0 0;
-    font-size: 3em;
+.logo img {
+    transform: scale(0.65, 0.65);
+}
+
+.content {
+    text-align: center;
+    padding: 0px 35px;
     font-weight: 300;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--desat-red);
-    line-height: 1.3em;
 }
 
-.coming-soon {
-    color: var(--dark-red);
-    font-size: 3em;
-    font-weight: 600;
+.content h3 {
+    font-size: 40px;
+    line-height: 1;
+    padding: 0 40px;
     text-transform: uppercase;
-    letter-spacing: 0.3em;
-    margin-bottom: 0.5em;
-    width: 50%;
-    line-height: 1.3em;
+    letter-spacing: 10px;
+}
+
+span {
+    color: var(--desat-red);
+    font-weight: 300;
 }
 
 .description {
+    margin-top: -20px;
+    font-size: 14px;
+    line-height: 1.3;
     color: var(--desat-red);
-    width: 60%;
-    min-width: 400px;
-    line-height: 1.5em;
-    margin-bottom: 2em;
 }
 
-form {
-    width: 100%;
-    position: relative;
+#email-field {
+    margin-top: 15px;
+    border: 0.75px solid hsl(0, 36%, 70%);
+    padding: 10px 100px 10px 20px;
+    border-radius: 20px;
+    color:hsl(0, 36%, 70%);
 }
 
-.input-container {
-    width: 65%;
-    min-width: 400px;
-}
-
-#email {
-    border: 1px solid hsl(0, 36%, 70%);
-    border-radius: 50px;
-    background: transparent;
-    padding: 0 2em;
-    margin-left: 0.2em;
-    height: 50px;
-    width: 70%;
-    outline: none;
-}
-
-.danger-button {
-    background: var(--soft-red);
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    top: 20px;
-    right: 65%;
-    transition: 0.6s;
-    opacity: 0;
-}
-
-.danger-text {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--soft-red);
-    padding: 0.8em 3rem;
-    transition: 0.6s;
-    opacity: 0;
-}
-
-.button {
-    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    height: 55px;
+.email-btn {
+    padding: 8px 21.5px;
+    border-radius: 20px;
     border: none;
-    border-radius: 50px;
-    outline: none;
-    width: 90px;
-    transform: translate(-50%, 3px);
-    box-shadow: 0 10px 25px -5px hsl(0, 36%, 70%);
-    cursor: pointer;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 0 2.5px 5px hsl(0,36%,70%);
+    position: relative;
+    top: -38.5px;
+    left: 135px;
 }
 
-input::placeholder {
+.email-btn:hover {
+    background-image: linear-gradient(135deg,hsl(0, 100%, 98%), hsl(0, 80%, 86%));
+    box-shadow: 0 5.5px 5px hsl(0,26%,76%);
+}
+
+.error-img {
+    height: 22.5px;
+    width: 22.5px;
+    position: relative;
+    top: -35px;
+    left: 38px;
+    display: none;
+}
+
+.error-info {
+    font-size: 12px;
     color: var(--desat-red);
+    margin-top: -32px;
+    margin-left: -100px;
+    display: none;
 }
 
-.button:active {
-    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    color: var(--dark-red);
+    padding-top: 40px;
+    font-weight: 600;
 }
 
-@media screen and (max-width: 1000px) {
-    .hero-desktop {
-        min-width: 480px;
-    }
+.attribution a {
+    color: var(--soft-red);
+    font-weight: 300;
 }
 
-@media screen and (max-width: 768) {
-    .container {
-        height: initial;
-        flex-direction: column;
+@media only screen and (min-width: 1000px) {
+    body {
+        background-image: url(./images/bg-pattern-desktop.svg);
     }
 
-    .content-wrapper {
-        padding: 0;
-    }
-
-    .logo-container {
-        display: block;
-    }
-
-    .desktop-logo {
+    .mobile-hero {
         display: none;
+    }
+
+    .main-div {
+        margin: 0;
+        padding-left: 10%;
+        padding-top: 5%;
+        display: inline-block;
+        }
+
+    .desktop-hero {
+        display: block;
     }
 
     .logo {
-        padding: 2em;
+        transform: scale(1.45, 1.45);
+        padding-left: 60px;
     }
 
-    .title {
-        font-size: 2.5rem;
-        margin: 1.5em 0 0 0;
-        text-align: center;
-        width: 100%;
+    .content {
+        text-align: left;
+        padding-top: 5%;
     }
 
-    .hero-desktop {
-        display: none;
+    .content h3 {
+        padding-left: 0;
+        font-size: 64px;
     }
 
-    .hero-mobile {
-        display: block;
+    .content p {
+        line-height: 1.6;
+        width: 385px;
+        font-size: 15px;
     }
 
-    .coming-soon {
-        width: 100%;
-        font-size: 2.5rem;
-        text-align: center;
-        padding: 0 1em;
-    }
 
-    .description {
-        text-align: center;
-        font-size: 1rem;
-        width: 100%;
-        padding: 0 3.5em;
-    }
-
-    .input-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .danger-button {
-        top: 14px;
-        right: 35%;
-    }
-
-    .danger-text {
-        text-align: center;
-    }
-
-    .button {
-        position: absolute;
-        height: 50px;
-        transform: translate(-55);
-        right: 0;
-    }
 }
