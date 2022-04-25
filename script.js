@@ -8,6 +8,7 @@ function checkEmail() {
 
     let emailField = document.getElementById("email-field");
     let email = emailField.value;
+    console.log(email);
     
     if (email.length > 7 && email.contains('@') && email.contains('.') ) {
         emailField.style.border = '0.25px solid #f96262';
@@ -15,5 +16,6 @@ function checkEmail() {
         error_img.style.display="inline";
     } else {
         emailField.style.border = '1.25px solid #abd499';
+        
     }
 }

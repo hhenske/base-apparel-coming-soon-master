@@ -17,38 +17,35 @@
 </head>
 
 <body>
-    <div class="logo">
+  <main>
+    <div class="container">
       <img src="./images/logo.svg" alt="logo" id="logo-mobile" alt="logo" />
     </div>
 
-  <div  class="main-image">
-    <img src="images/hero-mobile.jpg" id="mobile-image" alt="main image">
-      <img src="images/hero-desktop.jpg" id="desktop-image" alt="main image">
-  </div>
-  
-  <div class="lower-section">
-    <img src="images/logo.svg" id="logo-desktop" alt="logo">
-    <article>
-      <h1> <span class="colored-text">We're</span><br>coming<br>soon</h1>
-        <p class="colored-text">
+    <section class="hero-image"></section>
+
+    <div  class="content">
+      <h1><span>We're</span><br />coming<br />soon</h1>
+        <p>
           Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
-    </article>
 
-    <div class = "email-container">
-      <form class="email-address">
-        <input type="email" id ="email-input" class="colored-text" placeholder="Email Address" novalidate>      
-        <input type="image" id="input-submit" src="images/icon-arrow.svg" alt="Submit">
+    <div class = "contact">
+      <form action ="">
+        <input type="email" id ="email-input" name="email" placeholder="Email Address" /> 
+        <button class="arrow-btn"><img src="images/icon-arrow.svg" alt="Submit" /></button>    
+        <img class="error-icon" src="./images/icon-error.svg" alt="error icon" />
+        <p class="error-text">Please provide a valid email</p>
       </form>
-        <p id="error-message">Please provide a valid email</p>
     </div>
   </div>
+</main>
 
-  <div>
+
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Holly Henke</a>.
     </p>
-  </div>
+  
 </body>
 </html>
