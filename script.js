@@ -1,25 +1,19 @@
-"use strict"
 
-let email = document.getElementById("name.email");
-let dangerIcon = document.getElementById("danger-button");
-let dangerText = document.getElementById("danger-text");
-let form = document.getElementById("form");
 
-console.log(email)
+function checkEmail() {
+    let error_img = document.getElementById('error-img');
+    error_img.style.display = "none";
+    let error_info = document.getElementById('error-info');
+    error_info.style.display = "none";
 
-form.addEventListener("submit", (email) => {
-    if (email.length > 7 ) {
-        dangerIcon.style.visibility = hidden;
-        dangerText.style.visibility = hidden;
-        console.log(email.length)
-        console.log("valid email")
+    let emailField = document.getElementById("email-field");
+    let email = emailField.value;
+    
+    if (email.length > 7 && email.contains('@') && email.contains('.') ) {
+        emailField.style.border = '0.25px solid #f96262';
+        error_info.style.display = "block";
+        error_img.style.display="inline";
     } else {
-        e.preventDefault();
-        // dangerIcon.style.visibility = true;
-        // dangerText.style.opacity = true; 
-        console.log(email.length)
-        console.log("invalid email")
+        emailField.style.border = '1.25px solid #abd499';
     }
-});
-
-// && email.contains("@") && email.contains(".")
+}

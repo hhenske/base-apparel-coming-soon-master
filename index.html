@@ -6,7 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <script src="script.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,47 +17,38 @@
 </head>
 
 <body>
-  <div class="main-div">
     <div class="logo">
-      <img src="./images/logo.svg" alt="logo" class="logo" />
+      <img src="./images/logo.svg" alt="logo" id="logo-mobile" alt="logo" />
     </div>
 
-  <div  class="mobile-hero">
-    <img src="./images/hero-mobile.jpg" alt="" />
+  <div  class="main-image">
+    <img src="images/hero-mobile.jpg" id="mobile-image" alt="main image">
+      <img src="images/hero-desktop.jpg" id="desktop-image" alt="main image">
   </div>
   
-  <div class="desktop-hero">
-    <img src="./images/hero-desktop.jpg" alt="" />
-  </div>
+  <div class="lower-section">
+    <img src="images/logo.svg" id="logo-desktop" alt="logo">
+    <article>
+      <h1> <span class="colored-text">We're</span><br>coming<br>soon</h1>
+        <p class="colored-text">
+          Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+    </article>
 
-  <div class="content">
-      <h3>
-        <span>We're</span>
-        Coming soon
-      </h3>
-    <p class="description">
-      Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-    </p>
-
-      <div class = "email-div">
-        <input type="text" id ="email-field" name="email" placeholder="Email Address" title="email-field">      
-        <button class="email-btn"><img src="./images/icon-arrow.svg" alt="arrow" /></button>
-        <img src="./images/icon-error.svg" alt="error icon"  class="error-img" />
-        <p class="error-info">Please provide a valid email</p>
-      </div>
+    <div class = "email-container">
+      <form class="email-address">
+        <input type="email" id ="email-input" class="colored-text" placeholder="Email Address" novalidate>      
+        <input type="image" id="input-submit" src="images/icon-arrow.svg" alt="Submit">
+      </form>
+        <p id="error-message">Please provide a valid email</p>
     </div>
-  </div>  
-
-  
-
   </div>
 
-  <footer>
+  <div>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Holly Henke</a>.
     </p>
-  </footer>
+  </div>
 </body>
 </html>
